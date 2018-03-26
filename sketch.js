@@ -7,7 +7,7 @@ var z;
 var r;
 var g;
 var b;
-var k=2;
+var k=1;
 var speed=8;
 var numstars=numstarsmax;
 
@@ -20,7 +20,6 @@ function setup() {
 	frameRate(60);
 	textSize(30);
 	textAlign(CENTER,CENTER);
-	console.log('This.r update');
 }
 
 function draw() {
@@ -29,12 +28,12 @@ if (mouseIsPressed){
 	numstars=numstarsmax*mouseY/height;
 }
 	background(0);
-	if(frameCount<=800){
+	if(frameCount<=400){
 		fill(255*(1-frameCount/400));
 		noStroke();
 		textSize(30);
-		text('Happy Birthday ',width/2,height/2-30);
-		text('Amanda',width/2,height/2);
+		text(' ',width/2,height/2-30);
+		text(' ',width/2,height/2);
 		textSize(20);
 		text ('try pressing spacebar & dragging mouse to differant locations on screen ',width/2,height/2+60);
 	}
@@ -50,9 +49,9 @@ function Star() {
 		this.y=random(-height/2,height/2);
 		this.z=random(width);
 		this.pz=this.z;
-	this.r=random (0,255);
-	this.g=random (0,255);
-	this.b=random (0,255);
+	this.r=255;
+	this.g=255;
+	this.b=255;
 
 	this.update=function(){
 		this.z=this.z-speed;
