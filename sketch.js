@@ -89,3 +89,7 @@ function keyTyped(){
 		k+=1;
 	}
 }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
